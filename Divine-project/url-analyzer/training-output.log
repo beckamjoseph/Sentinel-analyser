@@ -1,0 +1,51 @@
+{
+  "model": "calibrated character n-gram + lexical URL classifier",
+  "positive_classes": [
+    "phishing",
+    "malware"
+  ],
+  "excluded_class": "defacement (historical/noisy for present-day URL safety)",
+  "holdout": "domain-separated GroupShuffleSplit (20%)",
+  "rows": 49999,
+  "train_rows": 39191,
+  "test_rows": 10808,
+  "roc_auc": 0.8556,
+  "average_precision": 0.7287,
+  "confusion_matrix": [
+    [
+      8027,
+      675
+    ],
+    [
+      669,
+      1437
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.9230680772769089,
+      "recall": 0.9224316249138129,
+      "f1-score": 0.9227497413495804,
+      "support": 8702.0
+    },
+    "1": {
+      "precision": 0.6803977272727273,
+      "recall": 0.6823361823361823,
+      "f1-score": 0.6813655761024182,
+      "support": 2106.0
+    },
+    "accuracy": 0.8756476683937824,
+    "macro avg": {
+      "precision": 0.8017329022748181,
+      "recall": 0.8023839036249976,
+      "f1-score": 0.8020576587259993,
+      "support": 10808.0
+    },
+    "weighted avg": {
+      "precision": 0.8757823854644731,
+      "recall": 0.8756476683937824,
+      "f1-score": 0.8757146699200354,
+      "support": 10808.0
+    }
+  }
+}
