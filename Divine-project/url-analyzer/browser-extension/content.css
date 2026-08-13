@@ -1,0 +1,29 @@
+/* Content script styles for Sentinel extension */
+
+#sentinel-safety-indicator {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#sentinel-safety-indicator:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+/* Ensure indicator appears above other content */
+#sentinel-safety-indicator {
+    position: fixed !important;
+    z-index: 2147483647 !important;
+}
